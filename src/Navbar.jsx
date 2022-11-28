@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 /**
- * Navbar:
+ * Navbar: returns navbar component with links to snacks
  *
  * Props:
  *

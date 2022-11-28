@@ -4,7 +4,7 @@ import Snack from "./Snack";
 import MainPage from "./MainPage";
 
 /**
- * VendingMachine:
+ * VendingMachine: 
  *
  * Props:
  *
