@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import "./Navbar.css";
 
 /**
  * Navbar: returns navbar component with links to snacks
@@ -7,14 +8,46 @@ import { Link } from "react-router-dom";
  *
  * State:
  *
- * VendingMachine -> Navbar
+ * VendingMachine -> Navbar -> Link
  */
 function Navbar() {
+  const location = useLocation();
+
   return (
     <nav className="Navbar">
-      <Link to="/chips">Chips</Link>
-      <Link to="/soda">Soda</Link>
-      <Link to="/pretzels">Chips</Link>
+      <Link to="/chips">
+        <span
+          style={{
+            textDecoration: `${
+              location.pathname === "/chips" ? "underline" : ""
+            }`,
+          }}
+        >
+          Chips
+        </span>
+      </Link>
+      <Link to="/soda">
+        <span
+          style={{
+            textDecoration: `${
+              location.pathname === "/soda" ? "underline" : ""
+            }`,
+          }}
+        >
+          Soda
+        </span>
+      </Link>
+      <Link to="/pretzels">
+        <span
+          style={{
+            textDecoration: `${
+              location.pathname === "/pretzels" ? "underline" : ""
+            }`,
+          }}
+        >
+          Pretzels
+        </span>
+      </Link>
     </nav>
   );
 }

@@ -4,18 +4,18 @@ import Snack from "./Snack";
 import MainPage from "./MainPage";
 
 /**
- * VendingMachine: 
+ * VendingMachine:
  *
  * Props:
  *
  * State:
  *
- * VendingMachine -> Snack
+ * VendingMachine -> { Navbar, Snack, MainPage }
  */
 function VendingMachine() {
   return (
     <div className="VendingMachine">
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/:name" element={<Snack />} />
         <Route path="*" element={<MainPage />} />

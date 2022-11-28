@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
  *
  * State:
  *
- * VendingMachine -> MainPage
+ * VendingMachine -> MainPage -> Link
  */
 function MainPage() {
   return (
